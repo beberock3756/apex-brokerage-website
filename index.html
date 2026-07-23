@@ -96,8 +96,7 @@
   }
   .nav-row{display:flex; align-items:center; justify-content:space-between; height:84px;}
   .brand{display:flex; align-items:center; gap:14px;}
-  .brand img{height:38px; width:auto; filter:brightness(0) invert(1);}
-  .logo-white{filter:brightness(0) invert(1);}
+  .brand img{height:38px; width:auto;}
   nav.primary{display:flex; align-items:center; gap:34px;}
   nav.primary a{
     font-size:0.86rem; font-weight:500; color:var(--ink-1);
@@ -149,6 +148,24 @@
 
   .skyline-wrap{position:relative;}
   .skyline{width:100%; height:auto;}
+  .hero-portrait{
+    position:relative;
+    border:1px solid var(--line);
+    padding:14px;
+    background:linear-gradient(160deg, rgba(62,207,94,0.06), rgba(46,111,242,0.05));
+  }
+  .hero-portrait img{
+    width:100%; height:420px; object-fit:cover; object-position:top center;
+    filter:grayscale(0.15) contrast(1.03);
+    border:1px solid var(--line);
+  }
+  .hero-portrait-caption{
+    position:absolute; left:32px; bottom:32px;
+    display:flex; flex-direction:column; gap:4px;
+    background:rgba(10,13,16,0.72); backdrop-filter:blur(4px);
+    padding:10px 16px; border-left:2px solid var(--green);
+  }
+  @media (max-width:920px){ .hero-portrait img{height:340px;} }
 
   /* ===== Trust strip ===== */
   .trust{border-top:1px solid var(--line); border-bottom:1px solid var(--line); background:var(--panel);}
@@ -167,20 +184,22 @@
   /* ===== Legal highlight strip ===== */
   .legal-strip{
     border-bottom:1px solid var(--line);
-    background:
-      linear-gradient(90deg, rgba(62,207,94,0.06), transparent 60%);
+    background:linear-gradient(90deg, rgba(62,207,94,0.06), transparent 60%);
   }
-  .legal-strip .wrap{
-    padding:26px 32px;
-    display:flex; align-items:center; gap:20px; flex-wrap:wrap;
+  .legal-strip-inner{
+    padding:40px 32px;
+    display:grid; grid-template-columns:auto 1fr; gap:32px; align-items:center;
   }
-  .legal-strip .badge{
-    flex-shrink:0; width:40px; height:40px; border:1px solid var(--green);
-    display:flex; align-items:center; justify-content:center; border-radius:var(--radius);
+  @media (max-width:720px){ .legal-strip-inner{grid-template-columns:1fr; text-align:center;} }
+  .legal-partner{display:flex; align-items:center; gap:20px;}
+  @media (max-width:720px){ .legal-partner{flex-direction:column; margin:0 auto;} }
+  .legal-photo{
+    width:88px; height:88px; border-radius:50%; object-fit:cover;
+    border:2px solid var(--green);
   }
-  .legal-strip .badge svg{width:20px; height:20px;}
-  .legal-strip p{font-size:0.95rem; color:var(--ink-1); margin:0;}
-  .legal-strip p strong{color:var(--ink-0); font-weight:600;}
+  .legal-logo{height:76px; width:auto; opacity:0.95;}
+  .legal-copy p{font-size:0.95rem; color:var(--ink-1); margin:6px 0 0;}
+  .legal-copy p strong{color:var(--ink-0); font-weight:600;}
 
   /* ===== Services ===== */
   .services-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line); border:1px solid var(--line);}
@@ -289,7 +308,7 @@
 <header>
   <div class="wrap nav-row">
     <a href="#home" class="brand" aria-label="Apex Brokerage home">
-      <img src="assets/logo.png" alt="Apex Brokerage logo">
+      <img src="assets/logo_white.png" alt="Apex Brokerage logo">
     </a>
     <nav class="primary" aria-label="Primary">
       <a href="#sell">Sell a Business</a>
@@ -315,7 +334,7 @@
       <div>
         <span class="eyebrow">Tampa Bay Business Brokerage</span>
         <h1>Buying, selling, or <span class="accent">transitioning</span> a business in Tampa Bay starts with a clear number and a clear plan.</h1>
-        <p class="lede">Apex Brokerage guides Hillsborough, Pinellas, and Pasco County business owners through the entire deal — from a confidential valuation to a closed transaction — so you know exactly what your business is worth and what happens next.</p>
+        <p class="lede">Apex Brokerage guides business owners all throughout Florida through the entire deal — from a confidential valuation to a closed transaction — so you know exactly what your business is worth and what happens next.</p>
         <div class="hero-actions">
           <a href="tel:+18136445645" class="btn btn-primary">Call Us for a Free Consultation</a>
           <a href="#valuation" class="btn btn-outline">How We Evaluate Your Business</a>
@@ -323,34 +342,13 @@
         <p class="hero-note">No obligation. No pressure. A straight answer on where your business stands today.</p>
       </div>
       <div class="skyline-wrap">
-        <!-- Signature motif: Sunshine Skyway silhouette echoing the logo's peak mark -->
-        <svg class="skyline" viewBox="0 0 520 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration of the Tampa Bay skyline and Sunshine Skyway Bridge">
-          <defs>
-            <linearGradient id="skyfade" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="#2E6FF2" stop-opacity="0.18"/>
-              <stop offset="100%" stop-color="#2E6FF2" stop-opacity="0"/>
-            </linearGradient>
-          </defs>
-          <rect x="0" y="0" width="520" height="360" fill="url(#skyfade)"/>
-          <!-- water line -->
-          <line x1="0" y1="300" x2="520" y2="300" stroke="#232A32" stroke-width="1"/>
-          <!-- bridge deck -->
-          <line x1="40" y1="272" x2="480" y2="272" stroke="#6E7883" stroke-width="2"/>
-          <!-- pylon (mirrors logo peak) -->
-          <polygon points="260,86 300,272 220,272" fill="none" stroke="#3ECF5E" stroke-width="2"/>
-          <!-- cables -->
-          <line x1="260" y1="98" x2="120" y2="272" stroke="#3ECF5E" stroke-width="1"/>
-          <line x1="260" y1="98" x2="170" y2="272" stroke="#3ECF5E" stroke-width="1"/>
-          <line x1="260" y1="98" x2="215" y2="272" stroke="#3ECF5E" stroke-width="1"/>
-          <line x1="260" y1="98" x2="305" y2="272" stroke="#3ECF5E" stroke-width="1"/>
-          <line x1="260" y1="98" x2="350" y2="272" stroke="#3ECF5E" stroke-width="1"/>
-          <line x1="260" y1="98" x2="400" y2="272" stroke="#3ECF5E" stroke-width="1"/>
-          <!-- city block skyline, low-rise, sparse -->
-          <rect x="40" y="230" width="18" height="42" fill="none" stroke="#3A4451" stroke-width="1"/>
-          <rect x="65" y="245" width="14" height="27" fill="none" stroke="#3A4451" stroke-width="1"/>
-          <rect x="410" y="235" width="20" height="37" fill="none" stroke="#3A4451" stroke-width="1"/>
-          <rect x="438" y="250" width="12" height="22" fill="none" stroke="#3A4451" stroke-width="1"/>
-        </svg>
+        <div class="hero-portrait">
+          <img src="assets/zach.jpg" alt="Zach Rummell, founder of Apex Brokerage">
+          <div class="hero-portrait-caption">
+            <span class="eyebrow" style="color:var(--ink-0);">Zach Rummell</span>
+            <span style="font-size:0.82rem; color:var(--ink-2);">Founder, Apex Brokerage</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -381,13 +379,15 @@
 
   <!-- LEGAL HIGHLIGHT -->
   <div class="legal-strip">
-    <div class="wrap">
-      <span class="badge">
-        <svg viewBox="0 0 24 24" fill="none" stroke="#3ECF5E" stroke-width="1.6" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12 2l8 4v6c0 5-3.4 8.4-8 10-4.6-1.6-8-5-8-10V6l8-4z"/>
-        </svg>
-      </span>
-      <p><strong>Every transaction is reviewed by our in-house legal team — at no additional cost to you.</strong> Most brokerages send you out to hire your own attorney. We include legal oversight on every deal, so contracts, disclosures, and closing documents are covered from start to finish.</p>
+    <div class="wrap legal-strip-inner">
+      <div class="legal-partner">
+        <img src="assets/david.jpg" alt="David Rummell, in-house legal counsel" class="legal-photo">
+        <img src="assets/dr-law-center-logo.png" alt="DR Law Center logo" class="legal-logo">
+      </div>
+      <div class="legal-copy">
+        <span class="eyebrow">In-House Legal Partner</span>
+        <p><strong>Every transaction is reviewed by our in-house legal team — at no additional cost to you.</strong> Most brokerages send you out to hire your own attorney. In partnership with DR Law Center, we include legal oversight on every deal, so contracts, disclosures, and closing documents are covered from start to finish.</p>
+      </div>
     </div>
   </div>
 
@@ -647,7 +647,7 @@
   <div class="wrap">
     <div class="footer-grid">
       <div class="footer-brand">
-        <img src="assets/logo.png" alt="Apex Brokerage logo" class="logo-white">
+        <img src="assets/logo_white.png" alt="Apex Brokerage logo">
         <p>Tampa Bay business brokerage helping owners buy, sell, and transition companies with clarity and confidence.</p>
       </div>
       <div>
