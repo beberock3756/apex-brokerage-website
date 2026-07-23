@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apex Brokerage | Tampa Bay Business Broker — Buy, Sell &amp; Business Valuation</title>
+<meta name="description" content="Apex Brokerage helps Tampa Bay business owners sell, buy, and transition companies with confidence. Free business valuation and free consultation. Serving Tampa, St. Petersburg, Clearwater, Brandon &amp; all of Hillsborough and Pinellas County.">
+<meta name="keywords" content="business broker Tampa, sell my business Tampa Bay, business valuation Tampa, buy a business Florida, M&A advisor Tampa, business brokerage St Petersburg, business transition advisor Clearwater">
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+<!-- Local SEO structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Apex Brokerage",
+  "image": "assets/logo.png",
+  "description": "Business brokerage firm serving the Tampa Bay area, specializing in business sales, acquisitions, valuations, and ownership transitions.",
+  "areaServed": ["Tampa, FL", "St. Petersburg, FL", "Clearwater, FL", "Brandon, FL", "Wesley Chapel, FL", "Sarasota, FL", "Hillsborough County", "Pinellas County", "Pasco County"],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "320 W Bearss Ave",
+    "addressLocality": "Tampa",
+    "addressRegion": "FL",
+    "postalCode": "33613",
+    "addressCountry": "US"
+  },
+  "telephone": "(813) 644-5645",
+  "email": "zachary@theapexbrokerage.com",
+  "priceRange": "Free Consultation",
+  "url": "https://www.apexbrokerage.com"
+}
+</script>
+
+<style>
+  :root{
+    --void:#0A0D10;
+    --panel:#12161C;
+    --panel-2:#161B22;
+    --line:#232A32;
+    --green:#3ECF5E;
+    --green-dim:#2A7A3C;
+    --blue:#2E6FF2;
+    --blue-deep:#152238;
+    --ink-0:#F3F5F7;
+    --ink-1:#AEB6C0;
+    --ink-2:#6E7883;
+    --radius:2px;
+    --wrap:1180px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--void);
+    color:var(--ink-0);
+    font-family:'Inter', 'Helvetica Neue', Arial, sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  @font-face{ /* system fallback stack handles this; using Space Grotesk via class below */ }
+  h1,h2,h3,.display{
+    font-family:'Space Grotesk','Inter',sans-serif;
+    font-weight:600;
+    letter-spacing:-0.01em;
+    color:var(--ink-0);
+  }
+  .eyebrow{
+    font-family:'IBM Plex Mono','Courier New',monospace;
+    text-transform:uppercase;
+    letter-spacing:0.18em;
+    font-size:0.72rem;
+    color:var(--green);
+  }
+  a{color:inherit; text-decoration:none;}
+  img{max-width:100%; display:block;}
+  .wrap{max-width:var(--wrap); margin:0 auto; padding:0 32px;}
+  section{padding:96px 0;}
+  @media (max-width:720px){ section{padding:64px 0;} .wrap{padding:0 20px;} }
+
+  /* ===== Peak divider — the signature motif, echoes the logo's mountain-peak mark
+         and the cable-stayed silhouette of the Sunshine Skyway Bridge ===== */
+  .peakline{width:100%; height:56px; display:block;}
+  .peakline path.horizon{stroke:var(--line); stroke-width:1;}
+  .peakline path.peak{stroke:var(--green); stroke-width:1.5; fill:none;}
+
+  /* ===== Header ===== */
+  header{
+    position:sticky; top:0; z-index:100;
+    background:rgba(10,13,16,0.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-row{display:flex; align-items:center; justify-content:space-between; height:84px;}
+  .brand{display:flex; align-items:center; gap:14px;}
+  .brand img{height:38px; width:auto;}
+  nav.primary{display:flex; align-items:center; gap:34px;}
+  nav.primary a{
+    font-size:0.86rem; font-weight:500; color:var(--ink-1);
+    padding:6px 0; border-bottom:1px solid transparent;
+    transition:color .15s, border-color .15s;
+  }
+  nav.primary a:hover, nav.primary a:focus-visible{color:var(--ink-0); border-color:var(--green);}
+  .header-cta{display:flex; align-items:center; gap:18px;}
+  .phone-pill{
+    font-family:'IBM Plex Mono',monospace; font-size:0.85rem; color:var(--ink-0);
+    border:1px solid var(--line); padding:9px 14px; border-radius:var(--radius);
+  }
+  .phone-pill strong{color:var(--green); font-weight:600;}
+  .btn{
+    display:inline-block; padding:12px 22px; font-size:0.85rem; font-weight:600;
+    border-radius:var(--radius); letter-spacing:0.01em; cursor:pointer; border:1px solid transparent;
+    transition:transform .15s ease, background .15s ease, border-color .15s ease;
+  }
+  .btn:hover{transform:translateY(-1px);}
+  .btn-primary{background:var(--green); color:#06110A;}
+  .btn-primary:hover{background:#4FE075;}
+  .btn-outline{border-color:var(--ink-2); color:var(--ink-0);}
+  .btn-outline:hover{border-color:var(--blue); color:var(--blue);}
+  .btn-block{width:100%; text-align:center;}
+  .menu-toggle{display:none; background:none; border:none; color:var(--ink-0); font-size:1.6rem;}
+
+  @media (max-width:920px){
+    nav.primary{display:none;}
+    .phone-pill{display:none;}
+    .menu-toggle{display:block;}
+  }
+
+  /* ===== Hero ===== */
+  .hero{
+    position:relative;
+    padding:120px 0 80px;
+    overflow:hidden;
+    background:
+      radial-gradient(ellipse at 15% 0%, rgba(46,111,242,0.14), transparent 55%),
+      radial-gradient(ellipse at 85% 20%, rgba(62,207,94,0.10), transparent 50%);
+  }
+  .hero-grid{display:grid; grid-template-columns:1.1fr 0.9fr; gap:48px; align-items:center;}
+  @media (max-width:920px){ .hero-grid{grid-template-columns:1fr;} }
+  .hero h1{font-size:clamp(2.1rem, 4.4vw, 3.5rem); line-height:1.08; margin:18px 0 22px;}
+  .hero h1 .accent{color:var(--green);}
+  .hero p.lede{font-size:1.08rem; color:var(--ink-1); max-width:52ch; margin-bottom:34px;}
+  .hero-actions{display:flex; gap:16px; flex-wrap:wrap;}
+  .hero-note{margin-top:22px; font-size:0.82rem; color:var(--ink-2);}
+
+  .skyline-wrap{position:relative;}
+  .skyline{width:100%; height:auto;}
+  .hero-portrait{
+    position:relative;
+    border:1px solid var(--line);
+    padding:14px;
+    background:linear-gradient(160deg, rgba(62,207,94,0.06), rgba(46,111,242,0.05));
+  }
+  .hero-portrait img{
+    width:100%; height:420px; object-fit:cover; object-position:top center;
+    filter:grayscale(0.15) contrast(1.03);
+    border:1px solid var(--line);
+  }
+  .hero-portrait-caption{
+    position:absolute; left:32px; bottom:32px;
+    display:flex; flex-direction:column; gap:4px;
+    background:rgba(10,13,16,0.72); backdrop-filter:blur(4px);
+    padding:10px 16px; border-left:2px solid var(--green);
+  }
+  @media (max-width:920px){ .hero-portrait img{height:340px;} }
+
+  /* ===== Trust strip ===== */
+  .trust{border-top:1px solid var(--line); border-bottom:1px solid var(--line); background:var(--panel);}
+  .trust .wrap{padding:36px 32px;}
+  .trust-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:24px; text-align:center;}
+  @media (max-width:720px){ .trust-grid{grid-template-columns:repeat(2,1fr);} }
+  .trust-num{font-family:'Space Grotesk',sans-serif; font-size:2rem; font-weight:600; color:var(--ink-0);}
+  .trust-num span{color:var(--green);}
+  .trust-label{font-size:0.78rem; color:var(--ink-2); letter-spacing:0.04em; text-transform:uppercase; margin-top:4px;}
+
+  /* ===== Section headers ===== */
+  .sec-head{max-width:64ch; margin-bottom:52px;}
+  .sec-head h2{font-size:clamp(1.6rem,3vw,2.3rem); margin-top:12px;}
+  .sec-head p{color:var(--ink-1); margin-top:14px; font-size:1rem;}
+
+  /* ===== Legal highlight strip ===== */
+  .legal-strip{
+    border-bottom:1px solid var(--line);
+    background:linear-gradient(90deg, rgba(62,207,94,0.06), transparent 60%);
+  }
+  .legal-strip-inner{
+    padding:40px 32px;
+    display:grid; grid-template-columns:auto 1fr; gap:32px; align-items:center;
+  }
+  @media (max-width:720px){ .legal-strip-inner{grid-template-columns:1fr; text-align:center;} }
+  .legal-partner{display:flex; align-items:center; gap:20px;}
+  @media (max-width:720px){ .legal-partner{flex-direction:column; margin:0 auto;} }
+  .legal-photo{
+    width:88px; height:88px; border-radius:50%; object-fit:cover;
+    border:2px solid var(--green);
+  }
+  .legal-logo{height:76px; width:auto; opacity:0.95;}
+  .legal-copy p{font-size:0.95rem; color:var(--ink-1); margin:6px 0 0;}
+  .legal-copy p strong{color:var(--ink-0); font-weight:600;}
+
+  /* ===== Services ===== */
+  .services-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line); border:1px solid var(--line);}
+  @media (max-width:900px){ .services-grid{grid-template-columns:1fr;} }
+  .service-card{background:var(--void); padding:38px 32px; display:flex; flex-direction:column; gap:14px;}
+  .service-mark{font-family:'IBM Plex Mono',monospace; font-size:0.75rem; color:var(--blue);}
+  .service-card h3{font-size:1.25rem;}
+  .service-card p{color:var(--ink-1); font-size:0.94rem; flex:1;}
+  .service-card a{font-size:0.85rem; font-weight:600; color:var(--green);}
+  .service-card a:after{content:" →";}
+
+  /* ===== Process (real sequence — numbered) ===== */
+  .process{background:var(--panel); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .process-list{display:flex; flex-direction:column;}
+  .process-item{
+    display:grid; grid-template-columns:80px 1fr; gap:28px;
+    padding:30px 0; border-bottom:1px solid var(--line);
+  }
+  .process-item:last-child{border-bottom:none;}
+  .process-num{font-family:'Space Grotesk',sans-serif; font-size:1.6rem; color:var(--green); font-weight:600;}
+  .process-item h3{font-size:1.1rem; margin-bottom:6px;}
+  .process-item p{color:var(--ink-1); font-size:0.94rem; max-width:60ch;}
+
+  /* ===== Valuation callout ===== */
+  .valuation{
+    background:linear-gradient(135deg, var(--blue-deep), #0E1420 60%);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:56px 48px;
+    display:grid; grid-template-columns:1.3fr 0.7fr; gap:40px; align-items:center;
+  }
+  @media (max-width:820px){ .valuation{grid-template-columns:1fr; padding:40px 26px;} }
+  .valuation h2{font-size:clamp(1.5rem,2.6vw,2rem); margin-bottom:14px;}
+  .valuation p{color:var(--ink-1);}
+  .valuation-box{background:var(--panel-2); border:1px solid var(--line); padding:26px; border-radius:var(--radius);}
+  .valuation-box ul{list-style:none; display:flex; flex-direction:column; gap:10px; margin-bottom:22px;}
+  .valuation-box li{font-size:0.9rem; color:var(--ink-1); padding-left:18px; position:relative;}
+  .valuation-box li:before{content:"▲"; color:var(--green); font-size:0.6rem; position:absolute; left:0; top:5px;}
+
+  /* ===== Coverage / local SEO section ===== */
+  .coverage-grid{display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:start;}
+  @media (max-width:820px){ .coverage-grid{grid-template-columns:1fr;} }
+  .city-tags{display:flex; flex-wrap:wrap; gap:10px; margin-top:20px;}
+  .city-tags span{
+    font-size:0.8rem; padding:8px 14px; border:1px solid var(--line); border-radius:var(--radius); color:var(--ink-1);
+  }
+
+  /* ===== Testimonials ===== */
+  .testi-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
+  @media (max-width:900px){ .testi-grid{grid-template-columns:1fr;} }
+  .testi-card{background:var(--panel); border:1px solid var(--line); padding:28px; border-radius:var(--radius);}
+  .testi-card p{color:var(--ink-1); font-size:0.94rem; font-style:italic; margin-bottom:16px;}
+  .testi-name{font-size:0.85rem; color:var(--ink-0); font-weight:600;}
+  .testi-role{font-size:0.78rem; color:var(--ink-2);}
+
+  /* ===== CTA banner ===== */
+  .cta-banner{
+    background:var(--green); color:#06110A; text-align:center; padding:64px 32px; border-radius:var(--radius);
+  }
+  .cta-banner h2{color:#06110A; font-size:clamp(1.5rem,3vw,2.1rem);}
+  .cta-banner p{color:#0E2416; margin:14px auto 28px; max-width:52ch;}
+  .cta-banner .btn-primary{background:#06110A; color:var(--green);}
+  .cta-banner .btn-primary:hover{background:#0E2416;}
+
+  /* ===== Contact ===== */
+  .contact-grid{display:grid; grid-template-columns:0.9fr 1.1fr; gap:48px;}
+  @media (max-width:900px){ .contact-grid{grid-template-columns:1fr;} }
+  .contact-info dl{display:flex; flex-direction:column; gap:20px; margin-top:26px;}
+  .contact-info dt{font-size:0.75rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-2);}
+  .contact-info dd{font-size:1.05rem; color:var(--ink-0); margin-top:4px;}
+  form{display:flex; flex-direction:column; gap:16px;}
+  .field{display:flex; flex-direction:column; gap:6px;}
+  label{font-size:0.8rem; color:var(--ink-1);}
+  input, select, textarea{
+    background:var(--panel); border:1px solid var(--line); color:var(--ink-0);
+    padding:12px 14px; font-size:0.94rem; border-radius:var(--radius); font-family:inherit;
+  }
+  input:focus, select:focus, textarea:focus{outline:2px solid var(--green); outline-offset:1px; border-color:var(--green);}
+  textarea{resize:vertical; min-height:110px;}
+  .two-col{display:grid; grid-template-columns:1fr 1fr; gap:16px;}
+  @media (max-width:560px){ .two-col{grid-template-columns:1fr;} }
+
+  /* ===== Footer ===== */
+  footer{border-top:1px solid var(--line); background:var(--panel); padding:56px 0 32px;}
+  .footer-grid{display:grid; grid-template-columns:1.4fr 0.6fr 0.6fr 0.8fr; gap:32px; margin-bottom:40px;}
+  @media (max-width:820px){ .footer-grid{grid-template-columns:1fr 1fr;} }
+  .footer-grid h4{font-size:0.78rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-2); margin-bottom:16px;}
+  .footer-grid ul{list-style:none; display:flex; flex-direction:column; gap:10px;}
+  .footer-grid a{font-size:0.88rem; color:var(--ink-1);}
+  .footer-grid a:hover{color:var(--green);}
+  .footer-brand img{height:30px; margin-bottom:14px;}
+  .footer-brand p{font-size:0.85rem; color:var(--ink-2); max-width:34ch;}
+  .footer-bottom{
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px;
+    border-top:1px solid var(--line); padding-top:24px; font-size:0.78rem; color:var(--ink-2);
+  }
+
+  .skip-link{position:absolute; left:-9999px; top:0; background:var(--green); color:#06110A; padding:10px 16px; z-index:200;}
+  .skip-link:focus{left:12px; top:12px;}
+</style>
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to content</a>
+
+<header>
+  <div class="wrap nav-row">
+    <a href="#home" class="brand" aria-label="Apex Brokerage home">
+      <img src="assets/logo_white.png" alt="Apex Brokerage logo">
+    </a>
+    <nav class="primary" aria-label="Primary">
+      <a href="#sell">Sell a Business</a>
+      <a href="#buy">Buy a Business</a>
+      <a href="#valuation">Valuation</a>
+      <a href="#coverage">Service Area</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="header-cta">
+      <span class="phone-pill">Call now: <strong>(813) 644-5645</strong></span>
+      <a href="#contact" class="btn btn-primary">Free Consultation</a>
+    </div>
+    <button class="menu-toggle" aria-label="Open menu">☰</button>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">Tampa Bay Business Brokerage</span>
+        <h1>Buying, selling, or <span class="accent">transitioning</span> a business in Tampa Bay starts with a clear number and a clear plan.</h1>
+        <p class="lede">Apex Brokerage guides business owners all throughout Florida through the entire deal — from a confidential valuation to a closed transaction — so you know exactly what your business is worth and what happens next.</p>
+        <div class="hero-actions">
+          <a href="tel:+18136445645" class="btn btn-primary">Call Us for a Free Consultation</a>
+          <a href="#valuation" class="btn btn-outline">How We Evaluate Your Business</a>
+        </div>
+        <p class="hero-note">No obligation. No pressure. A straight answer on where your business stands today.</p>
+      </div>
+      <div class="skyline-wrap">
+        <div class="hero-portrait">
+          <img src="assets/zach.jpg" alt="Zach Rummell, founder of Apex Brokerage">
+          <div class="hero-portrait-caption">
+            <span class="eyebrow" style="color:var(--ink-0);">Zach Rummell</span>
+            <span style="font-size:0.82rem; color:var(--ink-2);">Founder, Apex Brokerage</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST STRIP -->
+  <div class="trust">
+    <div class="wrap">
+      <div class="trust-grid">
+        <div>
+          <div class="trust-num"><span>[X]</span>+</div>
+          <div class="trust-label">Businesses Sold</div>
+        </div>
+        <div>
+          <div class="trust-num"><span>[X]</span> Yrs</div>
+          <div class="trust-label">Tampa Bay Experience</div>
+        </div>
+        <div>
+          <div class="trust-num">$<span>[X]</span>M+</div>
+          <div class="trust-label">Transaction Value</div>
+        </div>
+        <div>
+          <div class="trust-num"><span>[X]</span> Counties</div>
+          <div class="trust-label">Served Across Florida</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LEGAL HIGHLIGHT -->
+  <div class="legal-strip">
+    <div class="wrap legal-strip-inner">
+      <div class="legal-partner">
+        <img src="assets/david.jpg" alt="David Rummell, in-house legal counsel" class="legal-photo">
+        <img src="assets/dr-law-center-logo.png" alt="DR Law Center logo" class="legal-logo">
+      </div>
+      <div class="legal-copy">
+        <span class="eyebrow">In-House Legal Partner</span>
+        <p><strong>Every transaction is reviewed by our in-house legal team — at no additional cost to you.</strong> Most brokerages send you out to hire your own attorney. In partnership with DR Law Center, we include legal oversight on every deal, so contracts, disclosures, and closing documents are covered from start to finish.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">What We Do</span>
+        <h2>One firm for every stage of ownership</h2>
+        <p>Whether you're preparing an exit, hunting for an acquisition, or handing a business to the next generation, Apex Brokerage runs the process so you can keep running the business.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card" id="sell">
+          <span class="service-mark">01 — Sell-Side</span>
+          <h3>Sell Your Business</h3>
+          <p>Confidential marketing, vetted buyers, and negotiation support for Tampa Bay owners ready to sell a business and exit on their terms — with our in-house legal team reviewing the transaction at no additional cost.</p>
+          <a href="#contact">Start a confidential conversation</a>
+        </div>
+        <div class="service-card" id="buy">
+          <span class="service-mark">02 — Buy-Side</span>
+          <h3>Buy a Business</h3>
+          <p>Off-market deal flow, financial screening, and deal structuring for buyers and investors targeting acquisitions in the Tampa Bay area.</p>
+          <a href="#contact">Tell us what you're looking for</a>
+        </div>
+        <div class="service-card" id="transitions">
+          <span class="service-mark">03 — Transitions</span>
+          <h3>Business Transitions</h3>
+          <p>Succession planning, partner buyouts, and ownership transfers structured to protect the business, the family, and the team.</p>
+          <a href="#contact">Plan your transition</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS / VALUATION -->
+  <section class="process" id="valuation">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Business Valuation</span>
+        <h2>How we evaluate your business</h2>
+        <p>Every engagement starts with a clear-eyed look at what your business is actually worth — before any conversation about a sale.</p>
+      </div>
+      <div class="process-list">
+        <div class="process-item">
+          <div class="process-num">01</div>
+          <div>
+            <h3>Discovery call</h3>
+            <p>A free, no-obligation conversation about your business, your goals, and your timeline — whether that's six months or six years out.</p>
+          </div>
+        </div>
+        <div class="process-item">
+          <div class="process-num">02</div>
+          <div>
+            <h3>Financial review</h3>
+            <p>We review revenue, margins, add-backs, and cash flow (SDE/EBITDA) to understand the true earning power of the business.</p>
+          </div>
+        </div>
+        <div class="process-item">
+          <div class="process-num">03</div>
+          <div>
+            <h3>Market comparables</h3>
+            <p>We benchmark against recent Tampa Bay and Florida transactions in your industry to ground the number in real market data.</p>
+          </div>
+        </div>
+        <div class="process-item">
+          <div class="process-num">04</div>
+          <div>
+            <h3>Valuation report</h3>
+            <p>You receive a clear, written estimate of value with the reasoning behind it — plain language, no jargon.</p>
+          </div>
+        </div>
+        <div class="process-item">
+          <div class="process-num">05</div>
+          <div>
+            <h3>Strategy session</h3>
+            <p>We walk through what could increase value before a sale, and lay out a realistic timeline if you decide to move forward.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUATION CALLOUT -->
+  <section>
+    <div class="wrap">
+      <div class="valuation">
+        <div>
+          <span class="eyebrow">Free, Confidential, No Obligation</span>
+          <h2>Get a real number, not a guess</h2>
+          <p>Most owners overestimate or underestimate what their business is worth. Our valuation gives you a defensible number based on your financials and current Tampa Bay market conditions — so you can plan your next move with confidence.</p>
+        </div>
+        <div class="valuation-box">
+          <ul>
+            <li>Revenue &amp; cash-flow analysis</li>
+            <li>Industry &amp; local market comparables</li>
+            <li>Written valuation summary</li>
+            <li>30-minute strategy session included</li>
+            <li>In-house legal review at no extra cost</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary btn-block">Request My Free Valuation</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COVERAGE / LOCAL SEO -->
+  <section id="coverage">
+    <div class="wrap coverage-grid">
+      <div>
+        <span class="eyebrow">Service Area</span>
+        <h2>Local knowledge across the Tampa Bay area</h2>
+        <p>Apex Brokerage works with business owners and buyers throughout Hillsborough, Pinellas, and Pasco Counties. Local market data means a more accurate valuation and a shorter path to close.</p>
+        <div class="city-tags">
+          <span>Tampa</span>
+          <span>St. Petersburg</span>
+          <span>Clearwater</span>
+          <span>Brandon</span>
+          <span>Wesley Chapel</span>
+          <span>New Tampa</span>
+          <span>Riverview</span>
+          <span>Largo</span>
+          <span>Sarasota</span>
+          <span>Lakeland</span>
+        </div>
+      </div>
+      <div>
+        <span class="eyebrow">Industries We Know</span>
+        <h2>Main-street to lower middle market</h2>
+        <p>From owner-operated service businesses to multi-location operations, we bring sector-specific comparables to every valuation and every deal.</p>
+        <div class="city-tags">
+          <span>Restaurants &amp; Hospitality</span>
+          <span>Healthcare &amp; Medical Practices</span>
+          <span>Home Services</span>
+          <span>Manufacturing</span>
+          <span>Retail</span>
+          <span>Professional Services</span>
+          <span>Distribution</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" style="background:var(--panel); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">About Apex Brokerage</span>
+        <h2>Built for owners who want a straight answer</h2>
+        <p>[One or two paragraphs here on your firm's story, founder background, and why you started Apex Brokerage — this is prime space for the personal credibility that sets you apart from bigger, less personal brokerages in the Tampa Bay market.]</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Client Results</span>
+        <h2>What Tampa Bay owners say</h2>
+      </div>
+      <div class="testi-grid">
+        <div class="testi-card">
+          <p>"[Placeholder testimonial — replace with a real quote once available.]"</p>
+          <div class="testi-name">[Client Name]</div>
+          <div class="testi-role">[Business Type, City]</div>
+        </div>
+        <div class="testi-card">
+          <p>"[Placeholder testimonial — replace with a real quote once available.]"</p>
+          <div class="testi-name">[Client Name]</div>
+          <div class="testi-role">[Business Type, City]</div>
+        </div>
+        <div class="testi-card">
+          <p>"[Placeholder testimonial — replace with a real quote once available.]"</p>
+          <div class="testi-name">[Client Name]</div>
+          <div class="testi-role">[Business Type, City]</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section>
+    <div class="wrap">
+      <div class="cta-banner">
+        <h2>Ready to find out what your business is worth?</h2>
+        <p>Call for a free, confidential consultation — no pressure, no obligation, just a clear picture of where you stand.</p>
+        <a href="tel:+18136445645" class="btn btn-primary">Call Us for a Free Consultation</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="wrap contact-grid">
+      <div class="contact-info">
+        <span class="eyebrow">Get In Touch</span>
+        <h2>Free consultation, no obligation</h2>
+        <p style="color:var(--ink-1); margin-top:12px;">Tell us a little about your business or what you're looking to buy, and we'll follow up within one business day.</p>
+        <dl>
+          <div>
+            <dt>Phone</dt>
+            <dd><a href="tel:+18136445645">(813) 644-5645</a></dd>
+          </div>
+          <div>
+            <dt>Email</dt>
+            <dd><a href="mailto:zachary@theapexbrokerage.com">zachary@theapexbrokerage.com</a></dd>
+          </div>
+          <div>
+            <dt>Office</dt>
+            <dd>320 W Bearss Ave, Tampa, FL 33613</dd>
+          </div>
+          <div>
+            <dt>Hours</dt>
+            <dd>Open 24/7</dd>
+          </div>
+        </dl>
+      </div>
+      <form action="#" method="POST">
+        <div class="two-col">
+          <div class="field">
+            <label for="name">Full name</label>
+            <input id="name" name="name" type="text" required>
+          </div>
+          <div class="field">
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" type="tel" required>
+          </div>
+        </div>
+        <div class="two-col">
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required>
+          </div>
+          <div class="field">
+            <label for="interest">I'm looking to</label>
+            <select id="interest" name="interest">
+              <option>Sell my business</option>
+              <option>Buy a business</option>
+              <option>Get a valuation</option>
+              <option>Plan a transition</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="message">Tell us about your business or goals</label>
+          <textarea id="message" name="message"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Request My Free Consultation</button>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="assets/logo_white.png" alt="Apex Brokerage logo">
+        <p>Tampa Bay business brokerage helping owners buy, sell, and transition companies with clarity and confidence.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#sell">Sell a Business</a></li>
+          <li><a href="#buy">Buy a Business</a></li>
+          <li><a href="#valuation">Business Valuation</a></li>
+          <li><a href="#transitions">Transitions</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#testimonials">Results</a></li>
+          <li><a href="#coverage">Service Area</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>(813) 644-5645</li>
+          <li>zachary@theapexbrokerage.com</li>
+          <li>Tampa, FL</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Apex Brokerage. All rights reserved.</span>
+      <span>Serving Tampa · St. Petersburg · Clearwater · Brandon · Sarasota</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Mobile menu toggle
+  const toggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('nav.primary');
+  toggle.addEventListener('click', () => {
+    const open = nav.style.display === 'flex';
+    nav.style.display = open ? 'none' : 'flex';
+    nav.style.flexDirection = 'column';
+    nav.style.position = 'absolute';
+    nav.style.top = '84px';
+    nav.style.left = '0';
+    nav.style.right = '0';
+    nav.style.background = 'rgba(10,13,16,0.98)';
+    nav.style.padding = '20px 32px';
+    nav.style.borderBottom = '1px solid #232A32';
+  });
+</script>
+
+</body>
+</html>
